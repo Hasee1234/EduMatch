@@ -1,5 +1,5 @@
-
 import React from 'react'
+import { Link } from 'react-router-dom'   // should be react-router-dom, not react-router
 
 export const Navbar = () => {
   return (
@@ -8,9 +8,9 @@ export const Navbar = () => {
         EduMatch
       </div>
 
-      <ul className="flex gap-20 text-gray-700 text-xl  items-center">
+      <ul className="flex gap-20 text-gray-700 text-xl items-center">
         <li>
-          <a href="#home" className="hover:text-blue-600">Home</a>
+          <Link to="/" className="hover:text-blue-600">Home</Link>
         </li>
         <li>
           <a href="#about" className="hover:text-blue-600">About</a>
@@ -19,18 +19,15 @@ export const Navbar = () => {
           <a href="#contact" className="hover:text-blue-600">Contact</a>
         </li>
         <li>
-       
-        <img 
-          src="src/assets/profile.webp" 
-          alt="Profile" 
-          className="h-12 w-12 rounded-full cursor-pointer hover:border-2 border-blue-600"
-        />
-      
-            
+          <Link to="/profile">
+            <img 
+              src="src/assets/profile.webp" 
+              alt="Profile" 
+              className="h-12 w-12 rounded-full cursor-pointer hover:border-2 border-blue-600"
+            />
+          </Link>
         </li>
       </ul>
-
     </nav>
   )
 }
-
